@@ -262,14 +262,16 @@
       let start = document.getElementById("start-bttn");
       let stop = document.getElementById("stop-bttn");
 
-      //selectors for selecting all circle
+      //selectors for selecting each circle individually
       let circle1 = document.getElementById("circle-1");
       let circle2 = document.getElementById("circle-2");
       let circle3 = document.getElementById("circle-3");
       let circle4 = document.getElementById("circle-4");
+
       let color = ["ff5c25", "ff6e2a", "ffa438", "ffec50", "ffec50", "ffec50", "ffec50","ffec50", "e5e55e","c7dc72","76cbac", "26acf6", "26acf6","26acf6", "26acf6","26acf6","25a5dd","259ec1", "288a79", "2a712c", "2a712c", "2a712c", "2a712c",  "2a712c", "3cbd2b", "556828", "9f5c24", "ff4c20", "ff4c20", "ff4c20", "ff4c20",  "ff4c20",
       ];
 
+      //selecting all circles together
       let boxes = document.querySelectorAll(".color__container div");
 
       let i = 0,
@@ -278,7 +280,7 @@
         l = i + 16,
         m = i + 24;
 
-        //start and stop for starting animation and stoping
+      //start and stop for starting animation and stoping
       start.addEventListener("click", move);
       stop.addEventListener("click", () => {
         for (let i = 0; i < boxes.length; i++) {
@@ -289,6 +291,8 @@
       });
 
       let interval;
+
+      //setInterval function for changing color within animation
       function move() {
         for (let i = 0; i < boxes.length; i++) {
           boxes[i].classList.add("trans" + i);
@@ -299,6 +303,7 @@
         }, 260);
       }
 
+      //changing backgroundcolor for 1st circle after some specific time
       function anime() {
         circle1.style.backgroundColor = "#" + color[j];
         if (j === color.length - 1) {
@@ -307,6 +312,7 @@
           j++;
         }
       }
+     //changing backgroundcolor for 2nd circle after some specific time
       function anime1() {
         circle2.style.backgroundColor = "#" + color[k];
         if (k === color.length - 1) {
@@ -315,6 +321,8 @@
           k++;
         }
       }
+
+      //changing backgroundcolor for 3rd circle after some specific time
       function anime2() {
         circle3.style.backgroundColor = "#" + color[l];
         if (l === color.length - 1) {
@@ -323,6 +331,8 @@
           l++;
         }
       }
+
+      //changing backgroundcolor for 4th circle after some specific time
       function anime3() {
         circle4.style.backgroundColor = "#" + color[m];
         if (m === color.length - 1) {
