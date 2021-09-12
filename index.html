@@ -17,7 +17,7 @@
         width: 11rem;
       }
 
-      #box-1 {
+      #circle-1 {
         position: absolute;
         height: 2.7rem;
         width: 2.7rem;
@@ -26,31 +26,27 @@
         border-radius: 42px;
         background-color: #ff4c20;
         z-index: 8;
-       
       }
-
-      .trans-stop0{
-        transition: width 4s linear; 
-      } 
-      /* @keyframes width-stop{
-        0%{
-            width: 78%;
+      .trans-stop0 {
+        animation: width-stop 1s linear;
+      }
+      @keyframes width-stop {
+        0% {
+          width: 58%;
         }
-        10%{
-           width: 60%;
+        10% {
+          width: 40%;
         }
-        50%{
+        50% {
           width: 2.7rem;
         }
-        75%{
+        75% {
           width: 2.7rem;
         }
-        100%{
+        100% {
           width: 2.7rem;
         }
-      } */
-
-      
+      }
 
       .trans0 {
         transition: background-color 0.25s linear;
@@ -70,7 +66,7 @@
         }
       }
 
-      #box-2 {
+      #circle-2 {
         position: absolute;
         height: 2.7rem;
         width: 2.7rem;
@@ -80,28 +76,27 @@
         background-color: #ffec50;
         z-index: 4;
       }
-       .trans-stop1{
-        transition: width 1s linear; 
-      } 
-      /* @keyframes height-stop1{
-        0%{
-            height: 78%;
+      .trans-stop1 {
+        animation: height-stop1 1s linear;
+      }
+      @keyframes height-stop1 {
+        0% {
+          height: 58%;
         }
-        10%{
-           height: 60%;
+        10% {
+          height: 40%;
         }
-        50%{
+        50% {
           height: 2.7rem;
         }
-        75%{
+        75% {
           height: 2.7rem;
         }
-        100%{
+        100% {
           height: 2.7rem;
         }
-      } */
+      }
 
-      
       .trans1 {
         transition: background-color 0.25s linear;
         animation: righ2 2s infinite;
@@ -117,7 +112,7 @@
         }
       }
 
-      #box-3 {
+      #circle-3 {
         position: absolute;
         height: 2.7rem;
         width: 2.7rem;
@@ -127,32 +122,27 @@
         background-color: #26acf6;
         z-index: 2;
       }
-      /* .trans-stop0{
-         transition-property: width;
-        transition-timing-function: ease-in-out;
-         transition-duration: 1s;
-      } */
-      .trans-stop2{
-        transition: width 1s linear; 
-      } 
-      /* @keyframes width-stop2{
-        0%{
-            width: 78%;
+      .trans-stop2 {
+        animation: width-stop2 1s linear;
+      }
+      @keyframes width-stop2 {
+        0% {
+          width: 58%;
         }
-        10%{
-           width: 60%;
+        10% {
+          width: 40%;
         }
-        50%{
+        50% {
           width: 2.7rem;
         }
-        75%{
+        75% {
           width: 2.7rem;
         }
-        100%{
+        100% {
           width: 2.7rem;
         }
-      } */
-      
+      }
+
       .trans2 {
         transition: background-color 0.25s linear;
         animation: righ3 2s infinite;
@@ -168,7 +158,7 @@
         }
       }
 
-      #box-4 {
+      #circle-4 {
         position: absolute;
         height: 2.7rem;
         width: 2.7rem;
@@ -179,28 +169,27 @@
         z-index: -5;
       }
 
-       .trans-stop3{
-        transition: width 1s linear; 
-      } 
-      /* @keyframes height-stop2{
-        0%{
-            height: 78%;
+      .trans-stop3 {
+        animation: height-stop2 1s linear;
+      }
+      @keyframes height-stop2 {
+        0% {
+          height: 58%;
         }
-        10%{
-           height: 60%;
+        10% {
+          height: 40%;
         }
-        50%{
+        50% {
           height: 2.7rem;
         }
-        75%{
+        75% {
           height: 2.7rem;
         }
-        100%{
+        100% {
           height: 2.7rem;
         }
-      } */
+      }
 
-      
       .trans3 {
         transition: background-color 0.25s linear;
         animation: righ4 2s infinite;
@@ -226,7 +215,7 @@
         margin-top: 6rem;
       }
 
-      .bttn__Conatiner {
+      .bttn__Container {
         display: flex;
         justify-content: space-between;
         width: 9rem;
@@ -258,58 +247,27 @@
   <body>
     <div class="container">
       <div class="color__container">
-        <div id="box-1"></div>
-        <div id="box-2"></div>
-        <div id="box-3"></div>
-        <div id="box-4"></div>
+        <div id="circle-1"></div>
+        <div id="circle-2"></div>
+        <div id="circle-3"></div>
+        <div id="circle-4"></div>
       </div>
-      <div class="bttn__Conatiner">
+      <div class="bttn__Container">
         <button id="start-bttn"><p>Start</p></button>
         <button id="stop-bttn"><p>Stop</p></button>
       </div>
     </div>
     <script>
-      
+      //start and stop button for start and stop
       let start = document.getElementById("start-bttn");
       let stop = document.getElementById("stop-bttn");
 
-      let box1 = document.getElementById("box-1");
-      let box2 = document.getElementById("box-2");
-      let box3 = document.getElementById("box-3");
-      let box4 = document.getElementById("box-4");
-      let color = [
-        "ff5c25", // -- 1
-        "ff6e2a", // -- 2
-        "ffa438", // -- 3
-        "ffec50", // -- 4
-        "ffec50", // -- 5
-        "ffec50", // -- 6
-        "ffec50", // -- 7
-        "ffec50", // -- 8
-        "e5e55e", // -- 9
-        "c7dc72", // -- 10
-        "76cbac", // -- 11
-        "26acf6", // -- 12
-        "26acf6", // -- 13
-        "26acf6", // -- 14
-        "26acf6", // -- 15
-        "26acf6", // -- 16
-        "25a5dd", // -- 17
-        "259ec1", // -- 18
-        "288a79", // -- 19
-        "2a712c", // -- 20
-        "2a712c", // -- 21
-        "2a712c", // -- 22
-        "2a712c", // -- 23
-        "2a712c", // -- 24
-        "3cbd2b", // -- 25
-        "556828", // -- 26
-        "9f5c24", // -- 27
-        "ff4c20", // -- 28
-        "ff4c20", // -- 29
-        "ff4c20", // -- 30
-        "ff4c20", // -- 31
-        "ff4c20",
+      //selectors for selecting all circle
+      let circle1 = document.getElementById("circle-1");
+      let circle2 = document.getElementById("circle-2");
+      let circle3 = document.getElementById("circle-3");
+      let circle4 = document.getElementById("circle-4");
+      let color = ["ff5c25", "ff6e2a", "ffa438", "ffec50", "ffec50", "ffec50", "ffec50","ffec50", "e5e55e","c7dc72","76cbac", "26acf6", "26acf6","26acf6", "26acf6","26acf6","25a5dd","259ec1", "288a79", "2a712c", "2a712c", "2a712c", "2a712c",  "2a712c", "3cbd2b", "556828", "9f5c24", "ff4c20", "ff4c20", "ff4c20", "ff4c20",  "ff4c20",
       ];
 
       let boxes = document.querySelectorAll(".color__container div");
@@ -320,35 +278,29 @@
         l = i + 16,
         m = i + 24;
 
-      console.log(j);
-
+        //start and stop for starting animation and stoping
       start.addEventListener("click", move);
-
       stop.addEventListener("click", () => {
         for (let i = 0; i < boxes.length; i++) {
           boxes[i].classList.remove("trans" + i);
-          // boxes[i].classList.add("trans-stop" + i);
-          // boxes[i].style.width = "2.7rem"
-          
+          boxes[i].classList.add("trans-stop" + i);
         }
-        box1.style.animationPlayState = "stop";
-        // box1.classList.add("trans-stop");
-        
-        clearInterval(inter);
+        clearInterval(interval);
       });
 
+      let interval;
       function move() {
         for (let i = 0; i < boxes.length; i++) {
           boxes[i].classList.add("trans" + i);
         }
 
-        inter = setInterval(function anim() {
+        interval = setInterval(function anim() {
           anime(), anime1(), anime2(), anime3();
         }, 260);
       }
 
       function anime() {
-        box1.style.backgroundColor = "#" + color[j];
+        circle1.style.backgroundColor = "#" + color[j];
         if (j === color.length - 1) {
           j = 0;
         } else {
@@ -356,7 +308,7 @@
         }
       }
       function anime1() {
-        box2.style.backgroundColor = "#" + color[k];
+        circle2.style.backgroundColor = "#" + color[k];
         if (k === color.length - 1) {
           k = 0;
         } else {
@@ -364,7 +316,7 @@
         }
       }
       function anime2() {
-        box3.style.backgroundColor = "#" + color[l];
+        circle3.style.backgroundColor = "#" + color[l];
         if (l === color.length - 1) {
           l = 0;
         } else {
@@ -372,7 +324,7 @@
         }
       }
       function anime3() {
-        box4.style.backgroundColor = "#" + color[m];
+        circle4.style.backgroundColor = "#" + color[m];
         if (m === color.length - 1) {
           m = 0;
         } else {
